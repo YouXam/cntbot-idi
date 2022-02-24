@@ -1,0 +1,1068 @@
+<!DOCTYPE html>
+<!-- saved from url=(0024)https://handle.antfu.me/ -->
+<html lang="en" style="--vh:8.99px;" class="dark">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="https://handle.antfu.me/favicon.svg" type="image/svg+xml">
+    <title>汉兜 - 汉字 Wordle</title>
+    <meta name="description" content="汉兜 - 汉字 Wordle">
+    <meta property="og:image" content="https://handle.antfu.me/og.png">
+    <meta property="og:title" content="汉兜">
+    <meta property="og:description" content="汉兜 - 汉字 Wordle">
+    <meta name="twitter:image" content="https://handle.antfu.me/og.png">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:creator" content="antfu7">
+    <script type="module" crossorigin="" src="./static/index.4a92e01a.js"></script>
+    <link rel="modulepreload" href="./static/vendor.36ddea37.js">
+    <link rel="stylesheet" href="./static/index.7bf691e5.css">
+    <style>
+        hcfy-result.__hcfy__result__loaded__.__hcfy__result__both__ {
+            border: 1px dotted
+        }
+    </style>
+</head>
+
+<body>
+    <div id="app" data-v-app="">
+        <main font-sans="" text="center gray-700 dark:gray-300" select-none="" class="">
+            <nav border="b base" relative="">
+                <div absolute="" font-serif="" text-2xl="" left-0="" right-0="" top-0="" bottom-0="" z--1=""
+                    tracking-2="" flex="">
+                    <div ma="" leading-1em="">汉兜</div>
+                </div>
+                <div flex="~" items-center="" justify-between="" md:max-w-md="" ma="" p4="">
+                    <div flex="~ gap-4" items-center=""><button class="icon-btn">
+                            <div i-carbon-help=""></div>
+                        </button>
+                        <!---->
+                    </div>
+                    <div flex="~ gap-4" items-center=""><button class="icon-btn">
+                            <div i-carbon-settings=""></div>
+                        </button><button class="icon-btn">
+                            <div i-carbon-sun="" dark:i-carbon-moon=""></div>
+                        </button></div>
+                </div>
+            </nav>
+            <div class="fixed left-0 right-0 top-0 bottom-0 z-40 pointer-events-none">
+                <div
+                    class="bg-base left-0 right-0 top-0 bottom-0 absolute transition-opacity duration-500 ease-out opacity-0">
+                </div>
+                <div class="bg-base border-base absolute transition-all duration-200 ease-out max-w-screen max-h-screen overflow-auto top-0 left-0 right-0 border-b scrolls"
+                    style="transform: translateY(-100%);">
+                    <div p6="" flex="~ col gap-4">
+                        <div flex="~ gap-4 center wrap">
+                            <div border="~ base" flex="~ gap-2" p="x2 y1"><button class="text-primary"> 简体 </button>
+                                <div w-1px="" border="r base"></div><button class="op80"> 繁體 </button>
+                            </div>
+                            <div border="~ base" flex="~ gap-2" p="x2 y1"><button class="text-primary">拼音</button>
+                                <div w-1px="" border="r base"></div><button class="op80">注音</button>
+                            </div>
+                        </div>
+                        <div flex="~ gap-4 center wrap">
+                            <div border="~ base" flex="~ gap-2" p="x2 y1" class=""><button
+                                    class="text-primary">符号声调</button>
+                                <div w-1px="" border="r base"></div><button class="op80">数字声调</button>
+                            </div>
+                            <div border="~ base" flex="~ gap-2" p="x2 y1"><button class="op80" relative="">色弱模式
+                                    <!---->
+                                </button></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="fixed left-0 right-0 top-0 bottom-0 z-40 pointer-events-none">
+                <div
+                    class="bg-base left-0 right-0 top-0 bottom-0 absolute transition-opacity duration-500 ease-out opacity-0">
+                </div>
+                <div class="bg-base border-base absolute transition-all duration-200 ease-out max-w-screen max-h-screen overflow-auto top-0 left-0 right-0 border-b scrolls"
+                    style="transform: translateY(-100%);">
+                    <div p="x5 y10" flex="~ col gap-2 y-center" relative="">
+                        <div absolute="" top-4="" right-4="" flex="~ gap-3"><button icon-btn="">
+                                <div i-carbon-close=""></div>
+                            </button></div>
+                        <div text-3xl="" font-serif="" tracking-widest="">汉兜</div>
+                        <div mt--1="" op50="" text-sm="">汉字 Wordle</div>
+                        <div pl4="" py1="" tracking-2="" text-white="" shadow=""
+                            style="background: linear-gradient(339deg, rgb(229, 38, 38), rgb(239, 191, 14));">虎年快乐！
+                        </div>
+                        <div h-1px="" w-10="" border="b base" m4=""></div>
+                        <p text-xl="" font-serif="" mb4=""><b>游戏规则</b></p>
+                        <p>你有十次的机会猜一个 <b text-ok="">四字词语</b>。</p>
+                        <p>每次猜测后，汉字与拼音的颜色将会标识其与正确答案的区别。</p>
+                        <div h-1px="" w-10="" border="b base" m4=""></div>
+                        <div flex="" gap-2="" my2="" data-v-2c0e20e3="">
+                            <div w-20="" h-20="" class="tile revealed" data-v-2c0e20e3="">
+                                <div h-20="" w-20="" border-2="" font-serif="" leading-1em="" class="border-base front"
+                                    flex="~ center" relative="" data-v-2c0e20e3="" style="transition-delay: 0ms;">
+                                    <div text-3xl="" leading-1em="" mt-4="" class="">班</div>
+                                    <div absolute="" font-mono="" top="2.7" text-center="" left-0="" right-0=""
+                                        font-100="" flex="" flex-col="" items-center="">
+                                        <div relative="" flex="~ x-center gap-2px" items-start="" ma="">
+                                            <div class="">b</div>
+                                            <div class="">an</div>
+                                            <div class=""></div>
+                                            <div class="" absolute="" mt--1="" style="left: 12.24px; top: -1.2px;"><svg
+                                                    width="8" height="8" viewBox="0 0 20 20" fill="none"
+                                                    xmlns="http://www.w3.org/2000/svg">
+                                                    <path
+                                                        d="M3.35 8C2.60442 8 2 8.60442 2 9.35V10.35C2 11.0956 2.60442 11.7 3.35 11.7H17.35C18.0956 11.7 18.7 11.0956 18.7 10.35V9.35C18.7 8.60442 18.0956 8 17.35 8H3.35Z"
+                                                        fill="currentColor"></path>
+                                                    <!---->
+                                                    <!---->
+                                                    <!---->
+                                                </svg></div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div h-20="" w-20="" border-2="" font-serif="" leading-1em=""
+                                    class="border-transparent bg-gray-400/8 back" flex="~ center" relative=""
+                                    data-v-2c0e20e3="" style="transition-delay: 0ms; animation-delay: 0ms;">
+                                    <div text-3xl="" leading-1em="" mt-4="" class="op80">班</div>
+                                    <div absolute="" font-mono="" top="2.7" text-center="" left-0="" right-0=""
+                                        font-100="" flex="" flex-col="" items-center="">
+                                        <div relative="" flex="~ x-center gap-2px" items-start="" ma="">
+                                            <div class="op40">b</div>
+                                            <div class="op40">an</div>
+                                            <div class="text-ok"></div>
+                                            <div class="op40" absolute="" mt--1="" style="left: 12.24px; top: -1.2px;">
+                                                <svg width="8" height="8" viewBox="0 0 20 20" fill="none"
+                                                    xmlns="http://www.w3.org/2000/svg">
+                                                    <path
+                                                        d="M3.35 8C2.60442 8 2 8.60442 2 9.35V10.35C2 11.0956 2.60442 11.7 3.35 11.7H17.35C18.0956 11.7 18.7 11.0956 18.7 10.35V9.35C18.7 8.60442 18.0956 8 17.35 8H3.35Z"
+                                                        fill="currentColor"></path>
+                                                    <!---->
+                                                    <!---->
+                                                    <!---->
+                                                </svg></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div w-20="" h-20="" class="tile revealed" data-v-2c0e20e3="">
+                                <div h-20="" w-20="" border-2="" font-serif="" leading-1em="" class="border-base front"
+                                    flex="~ center" relative="" data-v-2c0e20e3="" style="transition-delay: 0ms;">
+                                    <div text-3xl="" leading-1em="" mt-4="" class="">门</div>
+                                    <div absolute="" font-mono="" top="2.7" text-center="" left-0="" right-0=""
+                                        font-100="" flex="" flex-col="" items-center="">
+                                        <div relative="" flex="~ x-center gap-2px" items-start="" ma="">
+                                            <div class="">m</div>
+                                            <div class="">en</div>
+                                            <div class=""></div>
+                                            <div class="" absolute="" mt--1="" style="left: 12.24px; top: -1.2px;"><svg
+                                                    width="8" height="8" viewBox="0 0 20 20" fill="none"
+                                                    xmlns="http://www.w3.org/2000/svg">
+                                                    <!---->
+                                                    <path
+                                                        d="M16.581 3.71105C16.2453 3.27254 15.6176 3.18923 15.1791 3.52498L3.26924 12.6439C2.83073 12.9796 2.74743 13.6073 3.08318 14.0458L4.29903 15.6338C4.63478 16.0723 5.26244 16.1556 5.70095 15.8199L17.6108 6.70095C18.0493 6.3652 18.1327 5.73754 17.7969 5.29903L16.581 3.71105Z"
+                                                        fill="currentColor"></path>
+                                                    <!---->
+                                                    <!---->
+                                                </svg></div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div h-20="" w-20="" border-2="" font-serif="" leading-1em=""
+                                    class="border-transparent bg-ok text-white back" flex="~ center" relative=""
+                                    data-v-2c0e20e3="" style="transition-delay: 0ms; animation-delay: 0ms;">
+                                    <div text-3xl="" leading-1em="" mt-4="" class="">门</div>
+                                    <div absolute="" font-mono="" top="2.7" text-center="" left-0="" right-0=""
+                                        font-100="" flex="" flex-col="" items-center="">
+                                        <div relative="" flex="~ x-center gap-2px" items-start="" ma="">
+                                            <div class="">m</div>
+                                            <div class="">en</div>
+                                            <div class=""></div>
+                                            <div class="" absolute="" mt--1="" style="left: 12.24px; top: -1.2px;"><svg
+                                                    width="8" height="8" viewBox="0 0 20 20" fill="none"
+                                                    xmlns="http://www.w3.org/2000/svg">
+                                                    <!---->
+                                                    <path
+                                                        d="M16.581 3.71105C16.2453 3.27254 15.6176 3.18923 15.1791 3.52498L3.26924 12.6439C2.83073 12.9796 2.74743 13.6073 3.08318 14.0458L4.29903 15.6338C4.63478 16.0723 5.26244 16.1556 5.70095 15.8199L17.6108 6.70095C18.0493 6.3652 18.1327 5.73754 17.7969 5.29903L16.581 3.71105Z"
+                                                        fill="currentColor"></path>
+                                                    <!---->
+                                                    <!---->
+                                                </svg></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div w-20="" h-20="" class="tile revealed" data-v-2c0e20e3="">
+                                <div h-20="" w-20="" border-2="" font-serif="" leading-1em="" class="border-base front"
+                                    flex="~ center" relative="" data-v-2c0e20e3="" style="transition-delay: 0ms;">
+                                    <div text-3xl="" leading-1em="" mt-4="" class="">弄</div>
+                                    <div absolute="" font-mono="" top="2.7" text-center="" left-0="" right-0=""
+                                        font-100="" flex="" flex-col="" items-center="">
+                                        <div relative="" flex="~ x-center gap-2px" items-start="" ma="">
+                                            <div class="">n</div>
+                                            <div class="">ong</div>
+                                            <div class=""></div>
+                                            <div class="" absolute="" mt--1="" style="left: 12.24px; top: -1.2px;"><svg
+                                                    width="8" height="8" viewBox="0 0 20 20" fill="none"
+                                                    xmlns="http://www.w3.org/2000/svg">
+                                                    <!---->
+                                                    <!---->
+                                                    <!---->
+                                                    <path
+                                                        d="M4.12282 3.71105C4.45857 3.27254 5.08623 3.18923 5.52474 3.52498L17.4346 12.6439C17.8731 12.9796 17.9564 13.6073 17.6207 14.0458L16.4048 15.6338C16.0691 16.0723 15.4414 16.1556 15.0029 15.8199L3.09303 6.70095C2.65452 6.3652 2.57122 5.73754 2.90697 5.29903L4.12282 3.71105Z"
+                                                        fill="currentColor"></path>
+                                                </svg></div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div h-20="" w-20="" border-2="" font-serif="" leading-1em=""
+                                    class="border-transparent bg-gray-400/8 back" flex="~ center" relative=""
+                                    data-v-2c0e20e3="" style="transition-delay: 0ms; animation-delay: 0ms;">
+                                    <div text-3xl="" leading-1em="" mt-4="" class="op80">弄</div>
+                                    <div absolute="" font-mono="" top="2.7" text-center="" left-0="" right-0=""
+                                        font-100="" flex="" flex-col="" items-center="">
+                                        <div relative="" flex="~ x-center gap-2px" items-start="" ma="">
+                                            <div class="op40">n</div>
+                                            <div class="op40">ong</div>
+                                            <div class="text-ok"></div>
+                                            <div class="op40" absolute="" mt--1="" style="left: 12.24px; top: -1.2px;">
+                                                <svg width="8" height="8" viewBox="0 0 20 20" fill="none"
+                                                    xmlns="http://www.w3.org/2000/svg">
+                                                    <!---->
+                                                    <!---->
+                                                    <!---->
+                                                    <path
+                                                        d="M4.12282 3.71105C4.45857 3.27254 5.08623 3.18923 5.52474 3.52498L17.4346 12.6439C17.8731 12.9796 17.9564 13.6073 17.6207 14.0458L16.4048 15.6338C16.0691 16.0723 15.4414 16.1556 15.0029 15.8199L3.09303 6.70095C2.65452 6.3652 2.57122 5.73754 2.90697 5.29903L4.12282 3.71105Z"
+                                                        fill="currentColor"></path>
+                                                </svg></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div w-20="" h-20="" class="tile revealed" data-v-2c0e20e3="">
+                                <div h-20="" w-20="" border-2="" font-serif="" leading-1em="" class="border-base front"
+                                    flex="~ center" relative="" data-v-2c0e20e3="" style="transition-delay: 0ms;">
+                                    <div text-3xl="" leading-1em="" mt-4="" class="">斧</div>
+                                    <div absolute="" font-mono="" top="2.7" text-center="" left-0="" right-0=""
+                                        font-100="" flex="" flex-col="" items-center="">
+                                        <div relative="" flex="~ x-center gap-2px" items-start="" ma="">
+                                            <div class="">f</div>
+                                            <div class="">u</div>
+                                            <div class=""></div>
+                                            <div class="" absolute="" mt--1="" style="left: 12.24px; top: -1.2px;"><svg
+                                                    width="8" height="8" viewBox="0 0 20 20" fill="none"
+                                                    xmlns="http://www.w3.org/2000/svg">
+                                                    <!---->
+                                                    <!---->
+                                                    <path
+                                                        d="M1.70711 7.70712C1.31658 7.3166 1.31658 6.68343 1.70711 6.29291L2.41421 5.5858C2.80474 5.19528 3.4379 5.19528 3.82843 5.5858L9.31502 11.0724C9.70555 11.4629 10.3387 11.4629 10.7292 11.0724L16.2158 5.5858C16.6064 5.19528 17.2395 5.19528 17.63 5.5858L18.3372 6.29291C18.7277 6.68343 18.7277 7.3166 18.3372 7.70712L10.7292 15.315C10.3387 15.7056 9.70555 15.7056 9.31502 15.315L1.70711 7.70712Z"
+                                                        fill="currentColor"></path>
+                                                    <!---->
+                                                </svg></div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div h-20="" w-20="" border-2="" font-serif="" leading-1em=""
+                                    class="border-transparent bg-gray-400/8 back" flex="~ center" relative=""
+                                    data-v-2c0e20e3="" style="transition-delay: 0ms; animation-delay: 0ms;">
+                                    <div text-3xl="" leading-1em="" mt-4="" class="op80">斧</div>
+                                    <div absolute="" font-mono="" top="2.7" text-center="" left-0="" right-0=""
+                                        font-100="" flex="" flex-col="" items-center="">
+                                        <div relative="" flex="~ x-center gap-2px" items-start="" ma="">
+                                            <div class="op40">f</div>
+                                            <div class="op40">u</div>
+                                            <div class="text-ok"></div>
+                                            <div class="op40" absolute="" mt--1="" style="left: 12.24px; top: -1.2px;">
+                                                <svg width="8" height="8" viewBox="0 0 20 20" fill="none"
+                                                    xmlns="http://www.w3.org/2000/svg">
+                                                    <!---->
+                                                    <!---->
+                                                    <path
+                                                        d="M1.70711 7.70712C1.31658 7.3166 1.31658 6.68343 1.70711 6.29291L2.41421 5.5858C2.80474 5.19528 3.4379 5.19528 3.82843 5.5858L9.31502 11.0724C9.70555 11.4629 10.3387 11.4629 10.7292 11.0724L16.2158 5.5858C16.6064 5.19528 17.2395 5.19528 17.63 5.5858L18.3372 6.29291C18.7277 6.68343 18.7277 7.3166 18.3372 7.70712L10.7292 15.315C10.3387 15.7056 9.70555 15.7056 9.31502 15.315L1.70711 7.70712Z"
+                                                        fill="currentColor"></path>
+                                                    <!---->
+                                                </svg></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <p>第二个字 <b text-ok="">门</b> 为青色，表示其出现在答案中且在正确的位置。</p>
+                        <div flex="" gap-2="" my2="" data-v-2c0e20e3="">
+                            <div w-20="" h-20="" class="tile revealed" data-v-2c0e20e3="">
+                                <div h-20="" w-20="" border-2="" font-serif="" leading-1em="" class="border-base front"
+                                    flex="~ center" relative="" data-v-2c0e20e3="" style="transition-delay: 0ms;">
+                                    <div text-3xl="" leading-1em="" mt-4="" class="">仓</div>
+                                    <div absolute="" font-mono="" top="2.7" text-center="" left-0="" right-0=""
+                                        font-100="" flex="" flex-col="" items-center="">
+                                        <div relative="" flex="~ x-center gap-2px" items-start="" ma="">
+                                            <div class="">c</div>
+                                            <div class="">ang</div>
+                                            <div class=""></div>
+                                            <div class="" absolute="" mt--1="" style="left: 12.24px; top: -1.2px;"><svg
+                                                    width="8" height="8" viewBox="0 0 20 20" fill="none"
+                                                    xmlns="http://www.w3.org/2000/svg">
+                                                    <path
+                                                        d="M3.35 8C2.60442 8 2 8.60442 2 9.35V10.35C2 11.0956 2.60442 11.7 3.35 11.7H17.35C18.0956 11.7 18.7 11.0956 18.7 10.35V9.35C18.7 8.60442 18.0956 8 17.35 8H3.35Z"
+                                                        fill="currentColor"></path>
+                                                    <!---->
+                                                    <!---->
+                                                    <!---->
+                                                </svg></div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div h-20="" w-20="" border-2="" font-serif="" leading-1em=""
+                                    class="border-transparent bg-gray-400/8 back" flex="~ center" relative=""
+                                    data-v-2c0e20e3="" style="transition-delay: 0ms; animation-delay: 0ms;">
+                                    <div text-3xl="" leading-1em="" mt-4="" class="text-mis">仓</div>
+                                    <div absolute="" font-mono="" top="2.7" text-center="" left-0="" right-0=""
+                                        font-100="" flex="" flex-col="" items-center="">
+                                        <div relative="" flex="~ x-center gap-2px" items-start="" ma="">
+                                            <div class="text-mis">c</div>
+                                            <div class="text-mis">ang</div>
+                                            <div class="text-ok"></div>
+                                            <div class="text-mis" absolute="" mt--1=""
+                                                style="left: 12.24px; top: -1.2px;"><svg width="8" height="8"
+                                                    viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                    <path
+                                                        d="M3.35 8C2.60442 8 2 8.60442 2 9.35V10.35C2 11.0956 2.60442 11.7 3.35 11.7H17.35C18.0956 11.7 18.7 11.0956 18.7 10.35V9.35C18.7 8.60442 18.0956 8 17.35 8H3.35Z"
+                                                        fill="currentColor"></path>
+                                                    <!---->
+                                                    <!---->
+                                                    <!---->
+                                                </svg></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div w-20="" h-20="" class="tile revealed" data-v-2c0e20e3="">
+                                <div h-20="" w-20="" border-2="" font-serif="" leading-1em="" class="border-base front"
+                                    flex="~ center" relative="" data-v-2c0e20e3="" style="transition-delay: 0ms;">
+                                    <div text-3xl="" leading-1em="" mt-4="" class="">颉</div>
+                                    <div absolute="" font-mono="" top="2.7" text-center="" left-0="" right-0=""
+                                        font-100="" flex="" flex-col="" items-center="">
+                                        <div relative="" flex="~ x-center gap-2px" items-start="" ma="">
+                                            <div class="">j</div>
+                                            <div class="">ie</div>
+                                            <div class=""></div>
+                                            <div class="" absolute="" mt--1="" style="left: 21.88px; top: -1.2px;"><svg
+                                                    width="8" height="8" viewBox="0 0 20 20" fill="none"
+                                                    xmlns="http://www.w3.org/2000/svg">
+                                                    <!---->
+                                                    <path
+                                                        d="M16.581 3.71105C16.2453 3.27254 15.6176 3.18923 15.1791 3.52498L3.26924 12.6439C2.83073 12.9796 2.74743 13.6073 3.08318 14.0458L4.29903 15.6338C4.63478 16.0723 5.26244 16.1556 5.70095 15.8199L17.6108 6.70095C18.0493 6.3652 18.1327 5.73754 17.7969 5.29903L16.581 3.71105Z"
+                                                        fill="currentColor"></path>
+                                                    <!---->
+                                                    <!---->
+                                                </svg></div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div h-20="" w-20="" border-2="" font-serif="" leading-1em=""
+                                    class="border-transparent bg-gray-400/8 back" flex="~ center" relative=""
+                                    data-v-2c0e20e3="" style="transition-delay: 0ms; animation-delay: 0ms;">
+                                    <div text-3xl="" leading-1em="" mt-4="" class="op80">颉</div>
+                                    <div absolute="" font-mono="" top="2.7" text-center="" left-0="" right-0=""
+                                        font-100="" flex="" flex-col="" items-center="">
+                                        <div relative="" flex="~ x-center gap-2px" items-start="" ma="">
+                                            <div class="op40">j</div>
+                                            <div class="op40">ie</div>
+                                            <div class="text-ok"></div>
+                                            <div class="op40" absolute="" mt--1="" style="left: 21.88px; top: -1.2px;">
+                                                <svg width="8" height="8" viewBox="0 0 20 20" fill="none"
+                                                    xmlns="http://www.w3.org/2000/svg">
+                                                    <!---->
+                                                    <path
+                                                        d="M16.581 3.71105C16.2453 3.27254 15.6176 3.18923 15.1791 3.52498L3.26924 12.6439C2.83073 12.9796 2.74743 13.6073 3.08318 14.0458L4.29903 15.6338C4.63478 16.0723 5.26244 16.1556 5.70095 15.8199L17.6108 6.70095C18.0493 6.3652 18.1327 5.73754 17.7969 5.29903L16.581 3.71105Z"
+                                                        fill="currentColor"></path>
+                                                    <!---->
+                                                    <!---->
+                                                </svg></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div w-20="" h-20="" class="tile revealed" data-v-2c0e20e3="">
+                                <div h-20="" w-20="" border-2="" font-serif="" leading-1em="" class="border-base front"
+                                    flex="~ center" relative="" data-v-2c0e20e3="" style="transition-delay: 0ms;">
+                                    <div text-3xl="" leading-1em="" mt-4="" class="">造</div>
+                                    <div absolute="" font-mono="" top="2.7" text-center="" left-0="" right-0=""
+                                        font-100="" flex="" flex-col="" items-center="">
+                                        <div relative="" flex="~ x-center gap-2px" items-start="" ma="">
+                                            <div class="">z</div>
+                                            <div class="">ao</div>
+                                            <div class=""></div>
+                                            <div class="" absolute="" mt--1="" style="left: 12.24px; top: -1.2px;"><svg
+                                                    width="8" height="8" viewBox="0 0 20 20" fill="none"
+                                                    xmlns="http://www.w3.org/2000/svg">
+                                                    <!---->
+                                                    <!---->
+                                                    <!---->
+                                                    <path
+                                                        d="M4.12282 3.71105C4.45857 3.27254 5.08623 3.18923 5.52474 3.52498L17.4346 12.6439C17.8731 12.9796 17.9564 13.6073 17.6207 14.0458L16.4048 15.6338C16.0691 16.0723 15.4414 16.1556 15.0029 15.8199L3.09303 6.70095C2.65452 6.3652 2.57122 5.73754 2.90697 5.29903L4.12282 3.71105Z"
+                                                        fill="currentColor"></path>
+                                                </svg></div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div h-20="" w-20="" border-2="" font-serif="" leading-1em=""
+                                    class="border-transparent bg-gray-400/8 back" flex="~ center" relative=""
+                                    data-v-2c0e20e3="" style="transition-delay: 0ms; animation-delay: 0ms;">
+                                    <div text-3xl="" leading-1em="" mt-4="" class="op80">造</div>
+                                    <div absolute="" font-mono="" top="2.7" text-center="" left-0="" right-0=""
+                                        font-100="" flex="" flex-col="" items-center="">
+                                        <div relative="" flex="~ x-center gap-2px" items-start="" ma="">
+                                            <div class="op40">z</div>
+                                            <div class="op40">ao</div>
+                                            <div class="text-ok"></div>
+                                            <div class="op40" absolute="" mt--1="" style="left: 12.24px; top: -1.2px;">
+                                                <svg width="8" height="8" viewBox="0 0 20 20" fill="none"
+                                                    xmlns="http://www.w3.org/2000/svg">
+                                                    <!---->
+                                                    <!---->
+                                                    <!---->
+                                                    <path
+                                                        d="M4.12282 3.71105C4.45857 3.27254 5.08623 3.18923 5.52474 3.52498L17.4346 12.6439C17.8731 12.9796 17.9564 13.6073 17.6207 14.0458L16.4048 15.6338C16.0691 16.0723 15.4414 16.1556 15.0029 15.8199L3.09303 6.70095C2.65452 6.3652 2.57122 5.73754 2.90697 5.29903L4.12282 3.71105Z"
+                                                        fill="currentColor"></path>
+                                                </svg></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div w-20="" h-20="" class="tile revealed" data-v-2c0e20e3="">
+                                <div h-20="" w-20="" border-2="" font-serif="" leading-1em="" class="border-base front"
+                                    flex="~ center" relative="" data-v-2c0e20e3="" style="transition-delay: 0ms;">
+                                    <div text-3xl="" leading-1em="" mt-4="" class="">字</div>
+                                    <div absolute="" font-mono="" top="2.7" text-center="" left-0="" right-0=""
+                                        font-100="" flex="" flex-col="" items-center="">
+                                        <div relative="" flex="~ x-center gap-2px" items-start="" ma="">
+                                            <div class="">z</div>
+                                            <div class="">ı</div>
+                                            <div class=""></div>
+                                            <div class="" absolute="" mt--1="" style="left: 12.24px; top: -1.2px;"><svg
+                                                    width="8" height="8" viewBox="0 0 20 20" fill="none"
+                                                    xmlns="http://www.w3.org/2000/svg">
+                                                    <!---->
+                                                    <!---->
+                                                    <!---->
+                                                    <path
+                                                        d="M4.12282 3.71105C4.45857 3.27254 5.08623 3.18923 5.52474 3.52498L17.4346 12.6439C17.8731 12.9796 17.9564 13.6073 17.6207 14.0458L16.4048 15.6338C16.0691 16.0723 15.4414 16.1556 15.0029 15.8199L3.09303 6.70095C2.65452 6.3652 2.57122 5.73754 2.90697 5.29903L4.12282 3.71105Z"
+                                                        fill="currentColor"></path>
+                                                </svg></div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div h-20="" w-20="" border-2="" font-serif="" leading-1em=""
+                                    class="border-transparent bg-gray-400/8 back" flex="~ center" relative=""
+                                    data-v-2c0e20e3="" style="transition-delay: 0ms; animation-delay: 0ms;">
+                                    <div text-3xl="" leading-1em="" mt-4="" class="op80">字</div>
+                                    <div absolute="" font-mono="" top="2.7" text-center="" left-0="" right-0=""
+                                        font-100="" flex="" flex-col="" items-center="">
+                                        <div relative="" flex="~ x-center gap-2px" items-start="" ma="">
+                                            <div class="op40">z</div>
+                                            <div class="op40">ı</div>
+                                            <div class="text-ok"></div>
+                                            <div class="op40" absolute="" mt--1="" style="left: 12.24px; top: -1.2px;">
+                                                <svg width="8" height="8" viewBox="0 0 20 20" fill="none"
+                                                    xmlns="http://www.w3.org/2000/svg">
+                                                    <!---->
+                                                    <!---->
+                                                    <!---->
+                                                    <path
+                                                        d="M4.12282 3.71105C4.45857 3.27254 5.08623 3.18923 5.52474 3.52498L17.4346 12.6439C17.8731 12.9796 17.9564 13.6073 17.6207 14.0458L16.4048 15.6338C16.0691 16.0723 15.4414 16.1556 15.0029 15.8199L3.09303 6.70095C2.65452 6.3652 2.57122 5.73754 2.90697 5.29903L4.12282 3.71105Z"
+                                                        fill="currentColor"></path>
+                                                </svg></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <p>第一个字 <b text-mis="">仓</b> 为橙色，表示其出现在答案中，但并不是第一个字。</p>
+                        <div flex="" gap-2="" my2="" data-v-2c0e20e3="">
+                            <div w-20="" h-20="" class="tile revealed" data-v-2c0e20e3="">
+                                <div h-20="" w-20="" border-2="" font-serif="" leading-1em="" class="border-base front"
+                                    flex="~ center" relative="" data-v-2c0e20e3="" style="transition-delay: 0ms;">
+                                    <div text-3xl="" leading-1em="" mt-4="" class="">巧</div>
+                                    <div absolute="" font-mono="" top="2.7" text-center="" left-0="" right-0=""
+                                        font-100="" flex="" flex-col="" items-center="">
+                                        <div relative="" flex="~ x-center gap-2px" items-start="" ma="">
+                                            <div class="">q</div>
+                                            <div class="">iao</div>
+                                            <div class=""></div>
+                                            <div class="" absolute="" mt--1="" style="left: 21.88px; top: -1.2px;"><svg
+                                                    width="8" height="8" viewBox="0 0 20 20" fill="none"
+                                                    xmlns="http://www.w3.org/2000/svg">
+                                                    <!---->
+                                                    <!---->
+                                                    <path
+                                                        d="M1.70711 7.70712C1.31658 7.3166 1.31658 6.68343 1.70711 6.29291L2.41421 5.5858C2.80474 5.19528 3.4379 5.19528 3.82843 5.5858L9.31502 11.0724C9.70555 11.4629 10.3387 11.4629 10.7292 11.0724L16.2158 5.5858C16.6064 5.19528 17.2395 5.19528 17.63 5.5858L18.3372 6.29291C18.7277 6.68343 18.7277 7.3166 18.3372 7.70712L10.7292 15.315C10.3387 15.7056 9.70555 15.7056 9.31502 15.315L1.70711 7.70712Z"
+                                                        fill="currentColor"></path>
+                                                    <!---->
+                                                </svg></div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div h-20="" w-20="" border-2="" font-serif="" leading-1em=""
+                                    class="border-transparent bg-gray-400/8 back" flex="~ center" relative=""
+                                    data-v-2c0e20e3="" style="transition-delay: 0ms; animation-delay: 0ms;">
+                                    <div text-3xl="" leading-1em="" mt-4="" class="op80">巧</div>
+                                    <div absolute="" font-mono="" top="2.7" text-center="" left-0="" right-0=""
+                                        font-100="" flex="" flex-col="" items-center="">
+                                        <div relative="" flex="~ x-center gap-2px" items-start="" ma="">
+                                            <div class="text-ok">q</div>
+                                            <div class="text-ok">iao</div>
+                                            <div class="text-ok"></div>
+                                            <div class="op40" absolute="" mt--1="" style="left: 21.88px; top: -1.2px;">
+                                                <svg width="8" height="8" viewBox="0 0 20 20" fill="none"
+                                                    xmlns="http://www.w3.org/2000/svg">
+                                                    <!---->
+                                                    <!---->
+                                                    <path
+                                                        d="M1.70711 7.70712C1.31658 7.3166 1.31658 6.68343 1.70711 6.29291L2.41421 5.5858C2.80474 5.19528 3.4379 5.19528 3.82843 5.5858L9.31502 11.0724C9.70555 11.4629 10.3387 11.4629 10.7292 11.0724L16.2158 5.5858C16.6064 5.19528 17.2395 5.19528 17.63 5.5858L18.3372 6.29291C18.7277 6.68343 18.7277 7.3166 18.3372 7.70712L10.7292 15.315C10.3387 15.7056 9.70555 15.7056 9.31502 15.315L1.70711 7.70712Z"
+                                                        fill="currentColor"></path>
+                                                    <!---->
+                                                </svg></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div w-20="" h-20="" class="tile revealed" data-v-2c0e20e3="">
+                                <div h-20="" w-20="" border-2="" font-serif="" leading-1em="" class="border-base front"
+                                    flex="~ center" relative="" data-v-2c0e20e3="" style="transition-delay: 0ms;">
+                                    <div text-3xl="" leading-1em="" mt-4="" class="">夺</div>
+                                    <div absolute="" font-mono="" top="2.7" text-center="" left-0="" right-0=""
+                                        font-100="" flex="" flex-col="" items-center="">
+                                        <div relative="" flex="~ x-center gap-2px" items-start="" ma="">
+                                            <div class="">d</div>
+                                            <div class="">uo</div>
+                                            <div class=""></div>
+                                            <div class="" absolute="" mt--1="" style="left: 21.88px; top: -1.2px;"><svg
+                                                    width="8" height="8" viewBox="0 0 20 20" fill="none"
+                                                    xmlns="http://www.w3.org/2000/svg">
+                                                    <!---->
+                                                    <path
+                                                        d="M16.581 3.71105C16.2453 3.27254 15.6176 3.18923 15.1791 3.52498L3.26924 12.6439C2.83073 12.9796 2.74743 13.6073 3.08318 14.0458L4.29903 15.6338C4.63478 16.0723 5.26244 16.1556 5.70095 15.8199L17.6108 6.70095C18.0493 6.3652 18.1327 5.73754 17.7969 5.29903L16.581 3.71105Z"
+                                                        fill="currentColor"></path>
+                                                    <!---->
+                                                    <!---->
+                                                </svg></div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div h-20="" w-20="" border-2="" font-serif="" leading-1em=""
+                                    class="border-transparent bg-gray-400/8 back" flex="~ center" relative=""
+                                    data-v-2c0e20e3="" style="transition-delay: 0ms; animation-delay: 0ms;">
+                                    <div text-3xl="" leading-1em="" mt-4="" class="op80">夺</div>
+                                    <div absolute="" font-mono="" top="2.7" text-center="" left-0="" right-0=""
+                                        font-100="" flex="" flex-col="" items-center="">
+                                        <div relative="" flex="~ x-center gap-2px" items-start="" ma="">
+                                            <div class="op40">d</div>
+                                            <div class="text-mis">uo</div>
+                                            <div class="text-ok"></div>
+                                            <div class="text-mis" absolute="" mt--1=""
+                                                style="left: 21.88px; top: -1.2px;"><svg width="8" height="8"
+                                                    viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                    <!---->
+                                                    <path
+                                                        d="M16.581 3.71105C16.2453 3.27254 15.6176 3.18923 15.1791 3.52498L3.26924 12.6439C2.83073 12.9796 2.74743 13.6073 3.08318 14.0458L4.29903 15.6338C4.63478 16.0723 5.26244 16.1556 5.70095 15.8199L17.6108 6.70095C18.0493 6.3652 18.1327 5.73754 17.7969 5.29903L16.581 3.71105Z"
+                                                        fill="currentColor"></path>
+                                                    <!---->
+                                                    <!---->
+                                                </svg></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div w-20="" h-20="" class="tile revealed" data-v-2c0e20e3="">
+                                <div h-20="" w-20="" border-2="" font-serif="" leading-1em="" class="border-base front"
+                                    flex="~ center" relative="" data-v-2c0e20e3="" style="transition-delay: 0ms;">
+                                    <div text-3xl="" leading-1em="" mt-4="" class="">天</div>
+                                    <div absolute="" font-mono="" top="2.7" text-center="" left-0="" right-0=""
+                                        font-100="" flex="" flex-col="" items-center="">
+                                        <div relative="" flex="~ x-center gap-2px" items-start="" ma="">
+                                            <div class="">t</div>
+                                            <div class="">ian</div>
+                                            <div class=""></div>
+                                            <div class="" absolute="" mt--1="" style="left: 21.88px; top: -1.2px;"><svg
+                                                    width="8" height="8" viewBox="0 0 20 20" fill="none"
+                                                    xmlns="http://www.w3.org/2000/svg">
+                                                    <path
+                                                        d="M3.35 8C2.60442 8 2 8.60442 2 9.35V10.35C2 11.0956 2.60442 11.7 3.35 11.7H17.35C18.0956 11.7 18.7 11.0956 18.7 10.35V9.35C18.7 8.60442 18.0956 8 17.35 8H3.35Z"
+                                                        fill="currentColor"></path>
+                                                    <!---->
+                                                    <!---->
+                                                    <!---->
+                                                </svg></div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div h-20="" w-20="" border-2="" font-serif="" leading-1em=""
+                                    class="border-transparent bg-gray-400/8 back" flex="~ center" relative=""
+                                    data-v-2c0e20e3="" style="transition-delay: 0ms; animation-delay: 0ms;">
+                                    <div text-3xl="" leading-1em="" mt-4="" class="op80">天</div>
+                                    <div absolute="" font-mono="" top="2.7" text-center="" left-0="" right-0=""
+                                        font-100="" flex="" flex-col="" items-center="">
+                                        <div relative="" flex="~ x-center gap-2px" items-start="" ma="">
+                                            <div class="text-ok">t</div>
+                                            <div class="op40">ian</div>
+                                            <div class="text-ok"></div>
+                                            <div class="text-ok" absolute="" mt--1=""
+                                                style="left: 21.88px; top: -1.2px;"><svg width="8" height="8"
+                                                    viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                    <path
+                                                        d="M3.35 8C2.60442 8 2 8.60442 2 9.35V10.35C2 11.0956 2.60442 11.7 3.35 11.7H17.35C18.0956 11.7 18.7 11.0956 18.7 10.35V9.35C18.7 8.60442 18.0956 8 17.35 8H3.35Z"
+                                                        fill="currentColor"></path>
+                                                    <!---->
+                                                    <!---->
+                                                    <!---->
+                                                </svg></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div w-20="" h-20="" class="tile revealed" data-v-2c0e20e3="">
+                                <div h-20="" w-20="" border-2="" font-serif="" leading-1em="" class="border-base front"
+                                    flex="~ center" relative="" data-v-2c0e20e3="" style="transition-delay: 0ms;">
+                                    <div text-3xl="" leading-1em="" mt-4="" class="">工</div>
+                                    <div absolute="" font-mono="" top="2.7" text-center="" left-0="" right-0=""
+                                        font-100="" flex="" flex-col="" items-center="">
+                                        <div relative="" flex="~ x-center gap-2px" items-start="" ma="">
+                                            <div class="">g</div>
+                                            <div class="">ong</div>
+                                            <div class=""></div>
+                                            <div class="" absolute="" mt--1="" style="left: 12.24px; top: -1.2px;"><svg
+                                                    width="8" height="8" viewBox="0 0 20 20" fill="none"
+                                                    xmlns="http://www.w3.org/2000/svg">
+                                                    <path
+                                                        d="M3.35 8C2.60442 8 2 8.60442 2 9.35V10.35C2 11.0956 2.60442 11.7 3.35 11.7H17.35C18.0956 11.7 18.7 11.0956 18.7 10.35V9.35C18.7 8.60442 18.0956 8 17.35 8H3.35Z"
+                                                        fill="currentColor"></path>
+                                                    <!---->
+                                                    <!---->
+                                                    <!---->
+                                                </svg></div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div h-20="" w-20="" border-2="" font-serif="" leading-1em=""
+                                    class="border-transparent bg-gray-400/8 back" flex="~ center" relative=""
+                                    data-v-2c0e20e3="" style="transition-delay: 0ms; animation-delay: 0ms;">
+                                    <div text-3xl="" leading-1em="" mt-4="" class="op80">工</div>
+                                    <div absolute="" font-mono="" top="2.7" text-center="" left-0="" right-0=""
+                                        font-100="" flex="" flex-col="" items-center="">
+                                        <div relative="" flex="~ x-center gap-2px" items-start="" ma="">
+                                            <div class="op40">g</div>
+                                            <div class="op40">ong</div>
+                                            <div class="text-ok"></div>
+                                            <div class="text-mis" absolute="" mt--1=""
+                                                style="left: 12.24px; top: -1.2px;"><svg width="8" height="8"
+                                                    viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                    <path
+                                                        d="M3.35 8C2.60442 8 2 8.60442 2 9.35V10.35C2 11.0956 2.60442 11.7 3.35 11.7H17.35C18.0956 11.7 18.7 11.0956 18.7 10.35V9.35C18.7 8.60442 18.0956 8 17.35 8H3.35Z"
+                                                        fill="currentColor"></path>
+                                                    <!---->
+                                                    <!---->
+                                                    <!---->
+                                                </svg></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <p max-w-130="">每个格子的 <b>汉字、声母、韵母、声调</b> 都会独立进行颜色的指示。 例如，第一个 <b op50="">巧</b> 汉字为灰色，而其 声母 与 韵母
+                            均为青色，代表该位置的正确答案为其同音字但非 <b op50="">巧</b> 字本身。 同理，第二个字中韵母 <b text-mis="">uo</b>
+                            为橙色，代表其韵母出现在四个字之中，但非位居第二。以此类推。</p>
+                        <div flex="" gap-2="" my2="" data-v-2c0e20e3="">
+                            <div w-20="" h-20="" class="tile revealed" data-v-2c0e20e3="">
+                                <div h-20="" w-20="" border-2="" font-serif="" leading-1em="" class="border-base front"
+                                    flex="~ center" relative="" data-v-2c0e20e3="" style="transition-delay: 0ms;">
+                                    <div text-3xl="" leading-1em="" mt-4="" class="">武</div>
+                                    <div absolute="" font-mono="" top="2.7" text-center="" left-0="" right-0=""
+                                        font-100="" flex="" flex-col="" items-center="">
+                                        <div relative="" flex="~ x-center gap-2px" items-start="" ma="">
+                                            <div class="">w</div>
+                                            <div class="">u</div>
+                                            <div class=""></div>
+                                            <div class="" absolute="" mt--1="" style="left: 12.24px; top: -1.2px;"><svg
+                                                    width="8" height="8" viewBox="0 0 20 20" fill="none"
+                                                    xmlns="http://www.w3.org/2000/svg">
+                                                    <!---->
+                                                    <!---->
+                                                    <path
+                                                        d="M1.70711 7.70712C1.31658 7.3166 1.31658 6.68343 1.70711 6.29291L2.41421 5.5858C2.80474 5.19528 3.4379 5.19528 3.82843 5.5858L9.31502 11.0724C9.70555 11.4629 10.3387 11.4629 10.7292 11.0724L16.2158 5.5858C16.6064 5.19528 17.2395 5.19528 17.63 5.5858L18.3372 6.29291C18.7277 6.68343 18.7277 7.3166 18.3372 7.70712L10.7292 15.315C10.3387 15.7056 9.70555 15.7056 9.31502 15.315L1.70711 7.70712Z"
+                                                        fill="currentColor"></path>
+                                                    <!---->
+                                                </svg></div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div h-20="" w-20="" border-2="" font-serif="" leading-1em=""
+                                    class="border-transparent bg-ok text-white back" flex="~ center" relative=""
+                                    data-v-2c0e20e3="" style="transition-delay: 0ms; animation-delay: 0ms;">
+                                    <div text-3xl="" leading-1em="" mt-4="" class="">武</div>
+                                    <div absolute="" font-mono="" top="2.7" text-center="" left-0="" right-0=""
+                                        font-100="" flex="" flex-col="" items-center="">
+                                        <div relative="" flex="~ x-center gap-2px" items-start="" ma="">
+                                            <div class="">w</div>
+                                            <div class="">u</div>
+                                            <div class=""></div>
+                                            <div class="" absolute="" mt--1="" style="left: 12.24px; top: -1.2px;"><svg
+                                                    width="8" height="8" viewBox="0 0 20 20" fill="none"
+                                                    xmlns="http://www.w3.org/2000/svg">
+                                                    <!---->
+                                                    <!---->
+                                                    <path
+                                                        d="M1.70711 7.70712C1.31658 7.3166 1.31658 6.68343 1.70711 6.29291L2.41421 5.5858C2.80474 5.19528 3.4379 5.19528 3.82843 5.5858L9.31502 11.0724C9.70555 11.4629 10.3387 11.4629 10.7292 11.0724L16.2158 5.5858C16.6064 5.19528 17.2395 5.19528 17.63 5.5858L18.3372 6.29291C18.7277 6.68343 18.7277 7.3166 18.3372 7.70712L10.7292 15.315C10.3387 15.7056 9.70555 15.7056 9.31502 15.315L1.70711 7.70712Z"
+                                                        fill="currentColor"></path>
+                                                    <!---->
+                                                </svg></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div w-20="" h-20="" class="tile revealed" data-v-2c0e20e3="">
+                                <div h-20="" w-20="" border-2="" font-serif="" leading-1em="" class="border-base front"
+                                    flex="~ center" relative="" data-v-2c0e20e3="" style="transition-delay: 0ms;">
+                                    <div text-3xl="" leading-1em="" mt-4="" class="">运</div>
+                                    <div absolute="" font-mono="" top="2.7" text-center="" left-0="" right-0=""
+                                        font-100="" flex="" flex-col="" items-center="">
+                                        <div relative="" flex="~ x-center gap-2px" items-start="" ma="">
+                                            <div class="">y</div>
+                                            <div class="">un</div>
+                                            <div class=""></div>
+                                            <div class="" absolute="" mt--1="" style="left: 12.24px; top: -1.2px;"><svg
+                                                    width="8" height="8" viewBox="0 0 20 20" fill="none"
+                                                    xmlns="http://www.w3.org/2000/svg">
+                                                    <!---->
+                                                    <!---->
+                                                    <!---->
+                                                    <path
+                                                        d="M4.12282 3.71105C4.45857 3.27254 5.08623 3.18923 5.52474 3.52498L17.4346 12.6439C17.8731 12.9796 17.9564 13.6073 17.6207 14.0458L16.4048 15.6338C16.0691 16.0723 15.4414 16.1556 15.0029 15.8199L3.09303 6.70095C2.65452 6.3652 2.57122 5.73754 2.90697 5.29903L4.12282 3.71105Z"
+                                                        fill="currentColor"></path>
+                                                </svg></div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div h-20="" w-20="" border-2="" font-serif="" leading-1em=""
+                                    class="border-transparent bg-ok text-white back" flex="~ center" relative=""
+                                    data-v-2c0e20e3="" style="transition-delay: 0ms; animation-delay: 0ms;">
+                                    <div text-3xl="" leading-1em="" mt-4="" class="">运</div>
+                                    <div absolute="" font-mono="" top="2.7" text-center="" left-0="" right-0=""
+                                        font-100="" flex="" flex-col="" items-center="">
+                                        <div relative="" flex="~ x-center gap-2px" items-start="" ma="">
+                                            <div class="">y</div>
+                                            <div class="">un</div>
+                                            <div class=""></div>
+                                            <div class="" absolute="" mt--1="" style="left: 12.24px; top: -1.2px;"><svg
+                                                    width="8" height="8" viewBox="0 0 20 20" fill="none"
+                                                    xmlns="http://www.w3.org/2000/svg">
+                                                    <!---->
+                                                    <!---->
+                                                    <!---->
+                                                    <path
+                                                        d="M4.12282 3.71105C4.45857 3.27254 5.08623 3.18923 5.52474 3.52498L17.4346 12.6439C17.8731 12.9796 17.9564 13.6073 17.6207 14.0458L16.4048 15.6338C16.0691 16.0723 15.4414 16.1556 15.0029 15.8199L3.09303 6.70095C2.65452 6.3652 2.57122 5.73754 2.90697 5.29903L4.12282 3.71105Z"
+                                                        fill="currentColor"></path>
+                                                </svg></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div w-20="" h-20="" class="tile revealed" data-v-2c0e20e3="">
+                                <div h-20="" w-20="" border-2="" font-serif="" leading-1em="" class="border-base front"
+                                    flex="~ center" relative="" data-v-2c0e20e3="" style="transition-delay: 0ms;">
+                                    <div text-3xl="" leading-1em="" mt-4="" class="">昌</div>
+                                    <div absolute="" font-mono="" top="2.7" text-center="" left-0="" right-0=""
+                                        font-100="" flex="" flex-col="" items-center="">
+                                        <div relative="" flex="~ x-center gap-2px" items-start="" ma="">
+                                            <div class="">ch</div>
+                                            <div class="">ang</div>
+                                            <div class=""></div>
+                                            <div class="" absolute="" mt--1="" style="left: 21.88px; top: -1.2px;"><svg
+                                                    width="8" height="8" viewBox="0 0 20 20" fill="none"
+                                                    xmlns="http://www.w3.org/2000/svg">
+                                                    <path
+                                                        d="M3.35 8C2.60442 8 2 8.60442 2 9.35V10.35C2 11.0956 2.60442 11.7 3.35 11.7H17.35C18.0956 11.7 18.7 11.0956 18.7 10.35V9.35C18.7 8.60442 18.0956 8 17.35 8H3.35Z"
+                                                        fill="currentColor"></path>
+                                                    <!---->
+                                                    <!---->
+                                                    <!---->
+                                                </svg></div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div h-20="" w-20="" border-2="" font-serif="" leading-1em=""
+                                    class="border-transparent bg-ok text-white back" flex="~ center" relative=""
+                                    data-v-2c0e20e3="" style="transition-delay: 0ms; animation-delay: 0ms;">
+                                    <div text-3xl="" leading-1em="" mt-4="" class="">昌</div>
+                                    <div absolute="" font-mono="" top="2.7" text-center="" left-0="" right-0=""
+                                        font-100="" flex="" flex-col="" items-center="">
+                                        <div relative="" flex="~ x-center gap-2px" items-start="" ma="">
+                                            <div class="">ch</div>
+                                            <div class="">ang</div>
+                                            <div class=""></div>
+                                            <div class="" absolute="" mt--1="" style="left: 21.88px; top: -1.2px;"><svg
+                                                    width="8" height="8" viewBox="0 0 20 20" fill="none"
+                                                    xmlns="http://www.w3.org/2000/svg">
+                                                    <path
+                                                        d="M3.35 8C2.60442 8 2 8.60442 2 9.35V10.35C2 11.0956 2.60442 11.7 3.35 11.7H17.35C18.0956 11.7 18.7 11.0956 18.7 10.35V9.35C18.7 8.60442 18.0956 8 17.35 8H3.35Z"
+                                                        fill="currentColor"></path>
+                                                    <!---->
+                                                    <!---->
+                                                    <!---->
+                                                </svg></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div w-20="" h-20="" class="tile revealed" data-v-2c0e20e3="">
+                                <div h-20="" w-20="" border-2="" font-serif="" leading-1em="" class="border-base front"
+                                    flex="~ center" relative="" data-v-2c0e20e3="" style="transition-delay: 0ms;">
+                                    <div text-3xl="" leading-1em="" mt-4="" class="">隆</div>
+                                    <div absolute="" font-mono="" top="2.7" text-center="" left-0="" right-0=""
+                                        font-100="" flex="" flex-col="" items-center="">
+                                        <div relative="" flex="~ x-center gap-2px" items-start="" ma="">
+                                            <div class="">l</div>
+                                            <div class="">ong</div>
+                                            <div class=""></div>
+                                            <div class="" absolute="" mt--1="" style="left: 12.24px; top: -1.2px;"><svg
+                                                    width="8" height="8" viewBox="0 0 20 20" fill="none"
+                                                    xmlns="http://www.w3.org/2000/svg">
+                                                    <!---->
+                                                    <path
+                                                        d="M16.581 3.71105C16.2453 3.27254 15.6176 3.18923 15.1791 3.52498L3.26924 12.6439C2.83073 12.9796 2.74743 13.6073 3.08318 14.0458L4.29903 15.6338C4.63478 16.0723 5.26244 16.1556 5.70095 15.8199L17.6108 6.70095C18.0493 6.3652 18.1327 5.73754 17.7969 5.29903L16.581 3.71105Z"
+                                                        fill="currentColor"></path>
+                                                    <!---->
+                                                    <!---->
+                                                </svg></div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div h-20="" w-20="" border-2="" font-serif="" leading-1em=""
+                                    class="border-transparent bg-ok text-white back" flex="~ center" relative=""
+                                    data-v-2c0e20e3="" style="transition-delay: 0ms; animation-delay: 0ms;">
+                                    <div text-3xl="" leading-1em="" mt-4="" class="">隆</div>
+                                    <div absolute="" font-mono="" top="2.7" text-center="" left-0="" right-0=""
+                                        font-100="" flex="" flex-col="" items-center="">
+                                        <div relative="" flex="~ x-center gap-2px" items-start="" ma="">
+                                            <div class="">l</div>
+                                            <div class="">ong</div>
+                                            <div class=""></div>
+                                            <div class="" absolute="" mt--1="" style="left: 12.24px; top: -1.2px;"><svg
+                                                    width="8" height="8" viewBox="0 0 20 20" fill="none"
+                                                    xmlns="http://www.w3.org/2000/svg">
+                                                    <!---->
+                                                    <path
+                                                        d="M16.581 3.71105C16.2453 3.27254 15.6176 3.18923 15.1791 3.52498L3.26924 12.6439C2.83073 12.9796 2.74743 13.6073 3.08318 14.0458L4.29903 15.6338C4.63478 16.0723 5.26244 16.1556 5.70095 15.8199L17.6108 6.70095C18.0493 6.3652 18.1327 5.73754 17.7969 5.29903L16.581 3.71105Z"
+                                                        fill="currentColor"></path>
+                                                    <!---->
+                                                    <!---->
+                                                </svg></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <p>当四个格子都为青色时，你便赢得了游戏！</p>
+                        <div h-1px="" w-10="" border="b base" m4=""></div><button btn="" tracking-widest=""
+                            p="x4 y2">开始游戏</button>
+                        <div op50="">* 新题目每日零时更新</div>
+                        <div p6="" flex="~ col gap-4">
+                            <div flex="~ gap-4 center wrap">
+                                <div border="~ base" flex="~ gap-2" p="x2 y1"><button class="text-primary"> 简体 </button>
+                                    <div w-1px="" border="r base"></div><button class="op80"> 繁體 </button>
+                                </div>
+                                <div border="~ base" flex="~ gap-2" p="x2 y1"><button class="text-primary">拼音</button>
+                                    <div w-1px="" border="r base"></div><button class="op80">注音</button>
+                                </div>
+                            </div>
+                            <div flex="~ gap-4 center wrap">
+                                <div border="~ base" flex="~ gap-2" p="x2 y1" class=""><button
+                                        class="text-primary">符号声调</button>
+                                    <div w-1px="" border="r base"></div><button class="op80">数字声调</button>
+                                </div>
+                                <div border="~ base" flex="~ gap-2" p="x2 y1"><button class="op80" relative="">色弱模式
+                                        <!---->
+                                    </button></div>
+                            </div>
+                        </div>
+                        <div h-1px="" w-10="" border="b base" m4=""></div><button text-primary="" op80=""
+                            hover:op100="">其他中文 Wordle 变体</button>
+                        <div h-1px="" w-10="" border="b base" m4=""></div>
+                        <div op50=""> heavily inspired by <a underline="" href="https://www.powerlanguage.co.uk/wordle/"
+                                target="_blank">Wordle</a></div>
+                        <div op50=""> made by <a underline="" href="https://twitter.com/antfu7"
+                                target="_blank">Anthony</a> &amp; <a underline=""
+                                href="https://twitter.com/iiiiiiines_____" target="_blank">Inès</a></div>
+                    </div>
+                </div>
+            </div>
+            <div class="fixed left-0 right-0 top-0 bottom-0 z-40 pointer-events-none">
+                <div
+                    class="bg-base left-0 right-0 top-0 bottom-0 absolute transition-opacity duration-500 ease-out opacity-0">
+                </div>
+                <div class="bg-base border-base absolute transition-all duration-200 ease-out max-w-screen max-h-screen overflow-auto top-0 left-0 right-0 border-b scrolls"
+                    style="transform: translateY(-100%);">
+                    <div p8="" flex="~ col gap-4" items-center="">
+                        <p><b>D36</b></p>
+                        <div>答案包含以下汉字</div>
+                        <div h-20="" w-20="" border-2="" font-serif="" leading-1em="" class="border-base"
+                            flex="~ center" relative="">
+                            <div text-3xl="" leading-1em="" mt-4="" class="">虎</div>
+                            <div absolute="" font-mono="" top="2.7" text-center="" left-0="" right-0="" font-100=""
+                                flex="" flex-col="" items-center="">
+                                <div relative="" flex="~ x-center gap-2px" items-start="" ma="">
+                                    <div class="">h</div>
+                                    <div class="">u</div>
+                                    <div class=""></div>
+                                    <div class="" absolute="" mt--1="" style="left: 12.24px; top: -1.2px;"><svg
+                                            width="8" height="8" viewBox="0 0 20 20" fill="none"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <!---->
+                                            <!---->
+                                            <path
+                                                d="M1.70711 7.70712C1.31658 7.3166 1.31658 6.68343 1.70711 6.29291L2.41421 5.5858C2.80474 5.19528 3.4379 5.19528 3.82843 5.5858L9.31502 11.0724C9.70555 11.4629 10.3387 11.4629 10.7292 11.0724L16.2158 5.5858C16.6064 5.19528 17.2395 5.19528 17.63 5.5858L18.3372 6.29291C18.7277 6.68343 18.7277 7.3166 18.3372 7.70712L10.7292 15.315C10.3387 15.7056 9.70555 15.7056 9.31502 15.315L1.70711 7.70712Z"
+                                                fill="currentColor"></path>
+                                            <!---->
+                                        </svg></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="fixed left-0 right-0 top-0 bottom-0 z-40 pointer-events-none">
+                <div
+                    class="bg-base left-0 right-0 top-0 bottom-0 absolute transition-opacity duration-500 ease-out opacity-0">
+                </div>
+                <div class="bg-base border-base absolute transition-all duration-200 ease-out max-w-screen max-h-screen overflow-auto top-0 left-0 right-0 border-b scrolls"
+                    style="transform: translateY(-100%);">
+                    <div p5="" flex="~ col center">
+                        <div i-carbon-face-dizzy="" text-5xl="" op50="" m4=""></div>
+                        <div>今天你已经用完十次的尝试机会了<br><br> 但是没关系，你还可以继续尝试<br> 你也可以随时放弃并查看答案</div>
+                        <div p4="" flex="~ gap-5 center"><button btn="">继续游戏</button><button icon-btn=""
+                                flex="inline gap-1 center" text="base mis!">
+                                <div i-mdi-emoticon-devil-outline=""></div> 查看答案
+                            </button></div>
+                    </div>
+                </div>
+            </div>
+            <div class="fixed left-0 right-0 top-0 bottom-0 z-40 pointer-events-none">
+                <div
+                    class="bg-base left-0 right-0 top-0 bottom-0 absolute transition-opacity duration-500 ease-out opacity-0">
+                </div>
+                <div class="bg-base border-base absolute transition-all duration-200 ease-out max-w-screen max-h-screen overflow-auto top-0 left-0 right-0 border-b scrolls"
+                    style="transform: translateY(-100%);">
+                    <div p5="" flex="~ col center">
+                        <p text-xl="" font-serif="" mb4=""><b>记分板</b></p>
+                        <div grid="~ cols-[max-content_1fr] gap-2" min-w-100px="">
+                            <div text-right="" op50="">游戏次数</div>
+                            <div text-left="">0</div>
+                            <div text-right="" op50="">获胜次数</div>
+                            <div text-left="">0</div>
+                            <div text-right="" op50="">获胜几率</div>
+                            <div text-left="">NaN% </div>
+                            <div text-right="" op50="">平均尝试次数</div>
+                            <div text-left="">NaN</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="fixed left-0 right-0 top-0 bottom-0 z-40 pointer-events-none">
+                <div
+                    class="bg-base left-0 right-0 top-0 bottom-0 absolute transition-opacity duration-500 ease-out opacity-0">
+                </div>
+                <div class="bg-base border-base absolute transition-all duration-200 ease-out max-w-screen max-h-screen overflow-auto top-0 left-0 right-0 border-b scrolls"
+                    style="transform: translateY(-100%);">
+                    <div p5="" flex="~ col center" class="variant-links" data-v-5482948f="">
+                        <p text-xl="" font-serif="" mb4="" data-v-5482948f=""><b data-v-5482948f="">其他中文 Wordle 变体</b>
+                        </p>
+                        <ul flex="~ col gap-3" text-left="" w-50="" m2="" list-disc="" data-v-5482948f="">
+                            <li data-v-5482948f=""><a href="https://pinyincaichengyu.com/" target="_blank"
+                                    data-v-5482948f="">拼音猜成语</a> - by <a href="https://twitter.com/_limboy"
+                                    data-v-5482948f="">limboy</a></li>
+                            <li data-v-5482948f=""><a href="https://cheeaun.github.io/chengyu-wordle/" target="_blank"
+                                    data-v-5482948f="">成语 Wordle</a> - by <a href="https://twitter.com/cheeaun"
+                                    data-v-5482948f="">Chee Aun</a></li>
+                            <li data-v-5482948f=""><a href="https://apps.apple.com/cn/app/id1606194420" target="_blank"
+                                    data-v-5482948f="">猜文字 (iOS)</a> - by <a href="https://twitter.com/OKJAKETO"
+                                    data-v-5482948f="">Jinke Du</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div p="4">
+                <div>
+                    <div flex="~ col gap-2" items-center=""><button icon-btn="" text-base="" pb2="" gap-1=""
+                            flex="~ center" class="">
+                            <div i-carbon-idea=""></div> 提示
+                        </button>
+                        <!---->
+                        <div flex="" gap-2="" data-v-2c0e20e3="">
+                            <div w-20="" h-20="" class="tile" data-v-2c0e20e3="">
+                                <div h-20="" w-20="" border-2="" font-serif="" leading-1em="" class="border-base front"
+                                    flex="~ center" relative="" data-v-2c0e20e3="" style="transition-delay: 0ms;">
+                                    <!---->
+                                </div>
+                                <div h-20="" w-20="" border-2="" font-serif="" leading-1em="" class="border-base back"
+                                    flex="~ center" relative="" data-v-2c0e20e3=""
+                                    style="transition-delay: 0ms; animation-delay: 0ms;">
+                                    <!---->
+                                </div>
+                            </div>
+                            <div w-20="" h-20="" class="tile" data-v-2c0e20e3="">
+                                <div h-20="" w-20="" border-2="" font-serif="" leading-1em="" class="border-base front"
+                                    flex="~ center" relative="" data-v-2c0e20e3="" style="transition-delay: 0ms;">
+                                    <!---->
+                                </div>
+                                <div h-20="" w-20="" border-2="" font-serif="" leading-1em="" class="border-base back"
+                                    flex="~ center" relative="" data-v-2c0e20e3=""
+                                    style="transition-delay: 0ms; animation-delay: 0ms;">
+                                    <!---->
+                                </div>
+                            </div>
+                            <div w-20="" h-20="" class="tile" data-v-2c0e20e3="">
+                                <div h-20="" w-20="" border-2="" font-serif="" leading-1em="" class="border-base front"
+                                    flex="~ center" relative="" data-v-2c0e20e3="" style="transition-delay: 0ms;">
+                                    <!---->
+                                </div>
+                                <div h-20="" w-20="" border-2="" font-serif="" leading-1em="" class="border-base back"
+                                    flex="~ center" relative="" data-v-2c0e20e3=""
+                                    style="transition-delay: 0ms; animation-delay: 0ms;">
+                                    <!---->
+                                </div>
+                            </div>
+                            <div w-20="" h-20="" class="tile" data-v-2c0e20e3="">
+                                <div h-20="" w-20="" border-2="" font-serif="" leading-1em="" class="border-base front"
+                                    flex="~ center" relative="" data-v-2c0e20e3="" style="transition-delay: 0ms;">
+                                    <!---->
+                                </div>
+                                <div h-20="" w-20="" border-2="" font-serif="" leading-1em="" class="border-base back"
+                                    flex="~ center" relative="" data-v-2c0e20e3=""
+                                    style="transition-delay: 0ms; animation-delay: 0ms;">
+                                    <!---->
+                                </div>
+                            </div>
+                        </div><input id="input" type="text" autocomplete="false" outline-none="" placeholder="输入四字词语..." w-86=""
+                            p3="" border="2 base" text="center" bg="transparent"><button id='btn' class="btn"
+                            disabled="">确定</button>
+                        <!---->
+                        <!---->
+                        <!---->
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+    <script>
+        (function () {
+            const prefersDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches
+            const setting = localStorage.getItem('color-schema') || 'auto'
+            if (setting === 'dark' || (prefersDark && setting !== 'light'))
+                document.documentElement.classList.toggle('dark', true)
+        })()
+    </script>
+
+
+
+</body>
+<div style="all: initial;">
+    <div id="__hcfy__" style="all: initial;"></div>
+</div>
+
+</html>
