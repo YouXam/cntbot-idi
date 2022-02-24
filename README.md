@@ -1,6 +1,6 @@
 # cntbot-idi
 
-[cntbot](https://github.com/YouXam/cntbot) 的猜成语后端
+[cntbot](https://github.com/YouXam/cntbot) 的猜成语后端，修改自 [汉兜](https://handle.antfu.me/)。
 
 ## 依赖
 
